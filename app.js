@@ -1,6 +1,18 @@
 var characterStats = new XMLHttpRequest();
 characterStats.open("GET", "./characters.json")
 characterStats.send()
-characterStats.addEventListener("load", ()=>{
-  console.log(JSON.parse(characterStats.responseText)[0]) //we can do anything with that data from here c:
+characterStats.addEventListener("load", () => {
+  
+  var characterPics = document.getElementsByClassName("characterPic");
+  var JSONParsedResponse = JSON.parse(characterStats.responseText)
+
+  for (let i = 0; i < characterPics.length; i++) {
+    characterPics[i].textContent = `Select ${JSONParsedResponse[i].name}`;
+    characterPics[i].onclick = () => selectCharacter(i);
+  }
+
+  function selectCharacter(num){
+    console.log(JSONParsedResponse[num]) 
+  }
+
 });
