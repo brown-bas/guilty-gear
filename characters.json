@@ -1,0 +1,12 @@
+{
+  "0":{
+    "Name": "Character1",
+    "Stars": 5,
+    "SomeOtherSkill": "Some value"
+  },
+  "1":{
+    "Name": "Character2",
+    "Stars": 4,
+    "SomeOtherSkill": "Some other value"
+  }
+}
