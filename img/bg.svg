@@ -1,0 +1,7 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M187.5 1080L622.5 0H0V1080H187.5Z" fill="#720505"/>
+<path d="M1920 0H1737.5L1300 1080H1920V0Z" fill="#720505"/>
+<path d="M187.5 1080H440L880 0H622.5L187.5 1080Z" fill="black" fill-opacity="0.5"/>
+<path d="M1737.5 0H1482.5L1040 1080H1300L1737.5 0Z" fill="black" fill-opacity="0.5"/>
+<path d="M880 0L440 1080H537.5H630L1065 0H880Z" fill="black" fill-opacity="0.25"/>
+</svg>
