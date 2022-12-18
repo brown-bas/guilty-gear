@@ -7,15 +7,21 @@ characterStats.addEventListener("load", () => {
   var JSONParsedResponse = JSON.parse(characterStats.responseText)
 
   for (let i = 0; i < characterPics.length; i++) {
+    if(i == Number(localStorage.getItem("selectedCharacter"))){characterPics[i].setAttribute("aria-selected", true)}
     characterPics[i].textContent = `Select ${JSONParsedResponse[i].name}`;
     characterPics[i].onclick = () => selectCharacter(i);
   }
 
   function selectCharacter(num){
-    if(num.toString() == localStorage.getItem("selectedCharacter")){
+    var selectedCharacter = Number(localStorage.getItem("selectedCharacter"))
+
+    if(num == selectedCharacter){
       console.log(`${JSONParsedResponse[num].name} is the currently selected character!`)
     }
+
     else{
+      characterPics[selectedCharacter].removeAttribute("aria-selected")
+      characterPics[num].setAttribute("aria-selected", true)
       console.log(JSONParsedResponse[num])
       localStorage.setItem("selectedCharacter", num)
     }
