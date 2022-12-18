@@ -12,7 +12,13 @@ characterStats.addEventListener("load", () => {
   }
 
   function selectCharacter(num){
-    console.log(JSONParsedResponse[num]) 
+    if(num.toString() == localStorage.getItem("selectedCharacter")){
+      console.log(`${JSONParsedResponse[num].name} is the currently selected character!`)
+    }
+    else{
+      console.log(JSONParsedResponse[num])
+      localStorage.setItem("selectedCharacter", num)
+    }
   }
 
 });

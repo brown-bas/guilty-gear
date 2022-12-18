@@ -1,18 +1,18 @@
 {
   "0":{
-    "name": "Character1",
+    "name": "Character0",
     "stars": 5,
     "SomeOtherSkill": "Some value"
   },
 
   "1":{
-    "name": "Character2",
+    "name": "Character1",
     "stars": 4,
     "SomeOtherSkill": "Some other value"
   },
 
   "2":{
-    "name": "Character3",
+    "name": "Character2",
     "stars": 3,
     "SomeOtherSkill": "Some other value again"
   }
