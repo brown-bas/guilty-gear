@@ -1,19 +1,22 @@
 {
   "0":{
-    "name": "Character0",
+    "name": "Ky Kiske",
     "stars": 5,
+    "image": "Ky_Kiske.png",
     "SomeOtherSkill": "Some value"
   },
 
   "1":{
-    "name": "Character1",
+    "name": "Sin Kiske",
     "stars": 4,
+    "image": "Sin_Kiske.png",
     "SomeOtherSkill": "Some other value"
   },
 
   "2":{
-    "name": "Character2",
+    "name": "Sol Badguy",
     "stars": 3,
+    "image": "Sol_Badguy.png",
     "SomeOtherSkill": "Some other value again"
   }
 }
