@@ -5,8 +5,9 @@ characterStats.addEventListener("load", () => {
 
   // Declarations for the HTML elements
   var main = document.getElementById("main")
-  var video = document.getElementById("videoContainer").getElementsByTagName("video")[0];
-  var videoContainer = document.getElementById("videoContainer")
+  var backgroundVideo = document.getElementById("backgroundVideo")
+  var mainVideo = document.getElementById("videoContainer").getElementsByTagName("video")[0];
+  var mainVideoContainer = document.getElementById("videoContainer")
   var characterMainPic = document.getElementById("characterMainPic")
   var JSONParsedResponse = JSON.parse(characterStats.responseText)
 
@@ -15,6 +16,7 @@ characterStats.addEventListener("load", () => {
     
     if(localStorage.getItem("selectedCharacter") != undefined && i == Number(localStorage.getItem("selectedCharacter"))){
       characterPic.setAttribute("aria-selected", true)
+      backgroundVideo.src = `./media/vid/${JSONParsedResponse[i].backgroundVideo}`
       characterMainPic.style.backgroundImage = `url('./media/img/characters/${JSONParsedResponse[i].image}')`
     }
 
@@ -37,6 +39,7 @@ characterStats.addEventListener("load", () => {
       characterPics[selectedCharacter].removeAttribute("aria-selected")
       characterPics[num].setAttribute("aria-selected", true)
       characterMainPic.style.backgroundImage = `url('./media/img/characters/${JSONParsedResponse[num].image}')`
+      backgroundVideo.src = `./media/vid/${JSONParsedResponse[num].backgroundVideo}`
       console.log(JSONParsedResponse[num])
       localStorage.setItem("selectedCharacter", num)
     }
@@ -47,14 +50,15 @@ characterStats.addEventListener("load", () => {
   function playCharacterMainTheme(){
     console.log(`Playing ${JSONParsedResponse[localStorage.getItem("selectedCharacter")].name}'s theme`)
     main.classList.toggle("visible") // Make main container invisible
-    videoContainer.classList.toggle("visible") // Make video container visible
-    video.src = "./media/vid/Guilty_Gear_Strive_-_Lets_ROCK_Green_Screen_1080p.mp4";
+    mainVideoContainer.classList.toggle("visible") // Make video container visible
+    backgroundVideo.classList.toggle("visible") // Make background video invisible
+    mainVideo.src = "./media/vid/Guilty_Gear_Strive_-_Lets_ROCK_Green_Screen_1080p.mp4";
     //video.requestFullscreen();
-    video.play();
-    video.onended = () => {
-      video.src = `./media/vid/${JSONParsedResponse[localStorage.getItem("selectedCharacter")].video}`;
-      video.play();
-      video.onended = () => {
+    mainVideo.play();
+    mainVideo.onended = () => {
+      mainVideo.src = `./media/vid/${JSONParsedResponse[localStorage.getItem("selectedCharacter")].themeVideo}`;
+      mainVideo.play();
+      mainVideo.onended = () => {
         document.location.reload();
       }
     };

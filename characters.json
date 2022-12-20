@@ -3,7 +3,8 @@
     "name": "Ky Kiske",
     "stars": 5,
     "image": "Ky_Kiske.png",
-    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
+    "themeVideo": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
+    "backgroundVideo": "Guilty_Gear_Strive_-_Lets_ROCK_Green_Screen_1080p.mp4",
     "SomeOtherSkill": "Some value"
   },
 
@@ -11,7 +12,8 @@
     "name": "Sin Kiske",
     "stars": 4,
     "image": "Sin_Kiske.png",
-    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
+    "themeVideo": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
+    "backgroundVideo": "bg_vid.mp4",
     "SomeOtherSkill": "Some other value"
   },
 
@@ -19,7 +21,8 @@
     "name": "Sol Badguy",
     "stars": 3,
     "image": "Sol_Badguy.png",
-    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
+    "themeVideo": "bg_vid.mp4",
+    "backgroundVideo": "bg_vid.mp4",
     "SomeOtherSkill": "Some other value again"
   }
 }
