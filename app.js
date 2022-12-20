@@ -4,17 +4,23 @@ characterStats.send()
 characterStats.addEventListener("load", () => {
   
   var characterMainPic = document.getElementById("characterMainPic");
-  var characterPics = document.getElementsByClassName("characterPic");
   var JSONParsedResponse = JSON.parse(characterStats.responseText)
 
-  for (let i = 0; i < characterPics.length; i++) {
+  for (let i = 0; i < Object.keys(JSONParsedResponse).length; i++) {
+    let characterPic = document.createElement("button");
+    
     if(i == Number(localStorage.getItem("selectedCharacter"))){
-      characterPics[i].setAttribute("aria-selected", true)
+      characterPic.setAttribute("aria-selected", true)
       characterMainPic.style.backgroundImage = `url('./img/characters/${JSONParsedResponse[i].image}')`
     }
-    characterPics[i].textContent = `Select ${JSONParsedResponse[i].name}`;
-    characterPics[i].onclick = () => selectCharacter(i);
+
+    characterPic.classList.add("characterPic")
+    characterPic.textContent = `Select ${JSONParsedResponse[i].name}`;
+    characterPic.onclick = () => selectCharacter(i);
+    document.getElementById("characterSelect").append(characterPic)
   }
+
+  var characterPics = document.getElementsByClassName("characterPic");
 
   function selectCharacter(num){
     var selectedCharacter = Number(localStorage.getItem("selectedCharacter"))
