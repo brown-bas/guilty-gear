@@ -3,6 +3,7 @@
     "name": "Ky Kiske",
     "stars": 5,
     "image": "Ky_Kiske.png",
+    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
     "SomeOtherSkill": "Some value"
   },
 
@@ -10,6 +11,7 @@
     "name": "Sin Kiske",
     "stars": 4,
     "image": "Sin_Kiske.png",
+    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
     "SomeOtherSkill": "Some other value"
   },
 
@@ -17,6 +19,7 @@
     "name": "Sol Badguy",
     "stars": 3,
     "image": "Sol_Badguy.png",
+    "video": "trim.56FE2FAA-3CD7-4F39-841D-A239A4D2BB09.mov",
     "SomeOtherSkill": "Some other value again"
   }
 }
